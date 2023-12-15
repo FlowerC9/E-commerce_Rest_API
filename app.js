@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import connectDb from "./db/connection.js";
 import authRouter from "./routes/authRoutes.js";
 import buyerRouter from './routes/buyerRoutes.js'
+import sellerRouter from './routes/sellerRoutes.js'
 const app = express();
 dotenv.config();
 connectDb();
@@ -14,6 +15,8 @@ app.get("/", (req, res) => {
 app.use("/api/auth", authRouter);
 
 app.use('/api/buyer',buyerRouter);
+
+app.use('/api/seller',sellerRouter);
 app.listen(PORT, () => {
   console.log(`Server is Running on ${PORT}`);
 });

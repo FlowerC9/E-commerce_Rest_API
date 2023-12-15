@@ -6,7 +6,7 @@ const sellerCatalogSchema=new mongoose.Schema({
         ref:'User',
         required:true,
     },
-    products:[Product.Schema],
+    products:[Product.schema],
 })
 const sellerCatalog=mongoose.model('sellerCatalog',sellerCatalogSchema);
 

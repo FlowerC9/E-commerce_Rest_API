@@ -12,7 +12,16 @@ export const allSellers=asyncHandler(async(req,res)=>{
 
 export const getCatalog=asyncHandler(async(req,res)=>{
     const sellerId=req.params.seller_id;
-    const catalog=await sellerCatalog.findOne({
-        
-    })
+    const catalog=await sellerCatalog.findOne({seller:sellerId}).populate('seller','username');
+    if(!catalog){
+        res.status(404).json({
+            success:false,
+            message:'Seller Catalog Not found',
+        })
+    }
+    else{
+        res.status(200).json({
+            catalog
+        })
+    }
 });
