@@ -89,7 +89,7 @@ Clone the project
 Go to the project directory
 
 ```bash
-  cd my-project
+  cd E-commerce_Rest_API
 ```
 
 Install dependencies
