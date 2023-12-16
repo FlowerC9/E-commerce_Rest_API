@@ -1,13 +1,34 @@
 import mongoose from "mongoose";
-import Product from "./productModel.js";
-const sellerCatalogSchema=new mongoose.Schema({
-    seller:{
-        type:mongoose.Schema.Types.ObjectId,
-        ref:'User',
-        required:true,
+
+const productSchema = new mongoose.Schema(
+  {
+    productName: {
+      type: String,
+      required: true,
     },
-    products:[Product.schema],
-})
-const sellerCatalog=mongoose.model('sellerCatalog',sellerCatalogSchema);
+    price: {
+      type: Number,
+      required: true,
+    },
+    category: {
+      type: String,
+      required: true,
+    },
+  },
+  {
+    timestamps: true, 
+  }
+);
+
+const sellerCatalogSchema = new mongoose.Schema({
+  seller: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+    required: true,
+  },
+  products: [productSchema],
+});
+
+const sellerCatalog = mongoose.model("sellerCatalog", sellerCatalogSchema);
 
 export default sellerCatalog;
