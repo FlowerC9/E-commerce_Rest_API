@@ -78,3 +78,29 @@ POST /api/seller/orders
 this request show all orders placed by all the buyers.
 it takes jwt token of logged in seller and response is list of orders.
 ![Screenshot 2023-12-16 163503](https://github.com/FlowerC9/E-commerce_Rest_API/assets/99163825/7d065edb-8384-4de0-bb51-c8c849b42453)
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/FlowerC9/E-commerce_Rest_API.git
+```
+
+Go to the project directory
+
+```bash
+  cd my-project
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run dev
+```
+
