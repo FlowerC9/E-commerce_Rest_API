@@ -33,11 +33,11 @@ response will be registered users json data
 | `password`      | `string` | **Required** |
 | `userType`      | `buyer or seller` | **Required** |
 
-is login credentials are right then this response will be genrated
+is login credentials are right then this response will be generated
 ![Screenshot 2023-12-16 162703](https://github.com/FlowerC9/E-commerce_Rest_API/assets/99163825/906d2b36-5020-403e-90cf-54c3775af739)
 else 
 ![Screenshot 2023-12-16 162812](https://github.com/FlowerC9/E-commerce_Rest_API/assets/99163825/ceafabce-1718-4829-83e6-168474627437)
-this response will be genrated ie.invalid credentials
+this response will be generated ie.invalid credentials
 
 ```http
 GET /api/buyer/list-of-sellers
