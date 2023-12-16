@@ -4,11 +4,13 @@ import User from "../models/userModel.js";
 import sellerCatalog from "../models/sellerCatalogModel.js";
 import Order from "../models/orderModel.js";
 export const allSellers = asyncHandler(async (req, res) => {
-  const sellers = await User.find({ userType: "seller" });
+  const sellers = await User.find({ userType: "seller" }).select("-password");
+
   res.status(200).json({
     sellers,
   });
 });
+
 
 export const getCatalog = asyncHandler(async (req, res) => {
   const sellerId = req.params.seller_id;
